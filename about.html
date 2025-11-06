@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - StudyFlow</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <nav>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-menu-link">Home</a>
+        <a href="techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="about.html" class="mobile-menu-link">About</a>
+        <a href="resources.html" class="mobile-menu-link">Resources</a>
+        <a href="contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
         <div class="nav-container">
             <div class="logo">StudyFlow</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="techniques.html">Techniques</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
     </nav>
 
@@ -26,9 +54,9 @@
     </section>
 
     <div class="content">
-        <section class="story-section" style="padding: 0; background: transparent;">
-            <div class="story-content" style="max-width: 900px;">
-                <div class="story-text" style="background: var(--dark-lighter);">
+        <section class="story-section">
+            <div class="story-content">
+                <div class="story-text">
                     <p>We've all been there: spending hours reading textbooks, highlighting passages, and re-reading notes the night before an exam. We feel busy, productive even. But when test day arrives, the information feels fuzzy, disconnected, difficult to recall.</p>
                 
                     <p>This happens because <span class="highlight">most traditional study habits are fundamentally inefficient</span>. They create an illusion of learning without building real understanding. Passive techniques like highlighting and re-reading feel comfortable, but research shows they're among the least effective methods for retention.</p>
@@ -39,16 +67,20 @@
         </section>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="logo">StudyFlow</div>
-            <ul class="footer-links">
-                <li><a href="techniques.html">Techniques</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <p style="color: var(--text-muted);">&copy; 2025 StudyFlow. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="techniques.html">Techniques</a>
+                    <a href="about.html">About</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
         </div>
     </footer>
 </body>

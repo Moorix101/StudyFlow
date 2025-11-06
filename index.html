@@ -7,198 +7,414 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-menu-link">Home</a>
+        <a href="techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="about.html" class="mobile-menu-link">About</a>
+        <a href="resources.html" class="mobile-menu-link">Resources</a>
+        <a href="contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
         <div class="nav-container">
             <div class="logo">StudyFlow</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="techniques.html">Techniques</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Master Your Study Flow</h1>
-            <p class="hero-subtitle">Transform your learning journey with proven methodologies that help you study smarter, retain more, and achieve your goals faster.</p>
-            <a href="techniques.html" class="cta-button">Discover Methods</a>
-        </div>
-    </section>
-
-    <!-- Why Study Methods Matter -->
-    <section class="why-section">
-        <h2 class="section-title">Why Study Methods Matter</h2>
-        <p class="section-subtitle">The difference between struggling and succeeding often comes down to approach</p>
-        
-        <div class="why-content">
-            <div class="why-card">
-                <div class="why-icon">🎯</div>
-                <h3>Work Smarter</h3>
-                <p>Most students spend countless hours studying but see minimal results. Effective methods help you focus your energy where it matters most, maximizing your return on time invested.</p>
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                </svg>
+                <span>Transform Your Learning Journey</span>
             </div>
 
-            <div class="why-card">
-                <div class="why-icon">🧩</div>
-                <h3>Deep Understanding</h3>
-                <p>Passive reading creates shallow knowledge. Strategic study techniques force you to actively engage with material, building genuine comprehension that lasts years, not days.</p>
+            <h1 class="hero-title">
+                <span class="hero-title-line">Master Your</span>
+                <span class="hero-title-gradient">Study Flow</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Transform your learning journey with proven methodologies that help you study smarter, retain more, and achieve your goals faster.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="techniques.html" class="btn-primary">
+                    <span>Discover Methods</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#why" class="btn-secondary">Learn More</a>
             </div>
 
-            <div class="why-card">
-                <div class="why-icon">⚡</div>
-                <h3>Sustainable Learning</h3>
-                <p>Burnout destroys progress. Structured methods help you maintain consistent momentum while preventing mental exhaustion, making learning a sustainable lifelong practice.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="benefits">
-        <h2 class="section-title">What You'll Gain</h2>
-        <p class="section-subtitle">Real benefits that transform how you learn and grow</p>
-        
-        <div class="benefits-grid">
-            <div class="benefit-item">
-                <div class="benefit-icon">💡</div>
-                <h3>Better Retention</h3>
-                <p>Remember information long-term instead of forgetting it after exams</p>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">⏱️</div>
-                <h3>Save Time</h3>
-                <p>Study less but accomplish more with focused, efficient sessions</p>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">📈</div>
-                <h3>Higher Grades</h3>
-                <p>Improve your academic performance with proven strategies</p>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">🎓</div>
-                <h3>True Mastery</h3>
-                <p>Build deep understanding, not superficial memorization</p>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">🔥</div>
-                <h3>Stay Motivated</h3>
-                <p>See progress faster, keeping you engaged and excited to learn</p>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">🌟</div>
-                <h3>Lifelong Skills</h3>
-                <p>Develop meta-learning abilities that serve you forever</p>
+            <div class="hero-cards">
+                <div class="hero-card">
+                    <div class="hero-card-icon">⚡</div>
+                    <h3>Faster Learning</h3>
+                    <p>Study 50% less time</p>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-icon">🎯</div>
+                    <h3>Better Retention</h3>
+                    <p>90% recall rate</p>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-icon">🚀</div>
+                    <h3>Real Results</h3>
+                    <p>Proven by research</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- The Problem & Solution -->
+    <section class="why-section" id="why">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Why Study Methods
+                    <span class="gradient-text">Matter</span>
+                </h2>
+                <p class="section-subtitle">
+                    The difference between struggling and succeeding often comes down to approach
+                </p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card why-card-1">
+                    <div class="why-gradient"></div>
+                    <div class="why-content">
+                        <div class="why-icon why-icon-purple">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Work Smarter</h3>
+                        <p>Most students spend countless hours studying but see minimal results. Effective methods help you focus your energy where it matters most, maximizing your return on time invested.</p>
+                    </div>
+                    <div class="why-blur"></div>
+                </div>
+
+                <div class="why-card why-card-2">
+                    <div class="why-gradient"></div>
+                    <div class="why-content">
+                        <div class="why-icon why-icon-pink">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Deep Understanding</h3>
+                        <p>Passive reading creates shallow knowledge. Strategic study techniques force you to actively engage with material, building genuine comprehension that lasts years, not days.</p>
+                    </div>
+                    <div class="why-blur"></div>
+                </div>
+
+                <div class="why-card why-card-3">
+                    <div class="why-gradient"></div>
+                    <div class="why-content">
+                        <div class="why-icon why-icon-blue">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </div>
+                        <h3>Sustainable Learning</h3>
+                        <p>Burnout destroys progress. Structured methods help you maintain consistent momentum while preventing mental exhaustion, making learning a sustainable lifelong practice.</p>
+                    </div>
+                    <div class="why-blur"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    What You'll
+                    <span class="gradient-text gradient-blue">Gain</span>
+                </h2>
+                <p class="section-subtitle">
+                    Real benefits that transform how you learn and grow
+                </p>
+            </div>
+
+            <div class="bento-grid">
+                
+                <div class="bento-card bento-medium"> 
+                    <div class="bento-gradient"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Better Retention</h3>
+                            <p>Remember long-term</p>
+                        </div>
+                    </div>
+                    <div class="bento-blur"></div>
+                </div>
+
+                <div class="bento-card bento-small">
+                    <div class="bento-gradient"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Save Time</h3>
+                            <p>Study less, accomplish more</p>
+                        </div>
+                    </div>
+                    <div class="bento-blur"></div>
+                </div>
+
+                <div class="bento-card bento-small">
+                    <div class="bento-gradient"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Higher Grades</h3>
+                            <p>Proven strategies</p>
+                        </div>
+                    </div>
+                    <div class="bento-blur"></div>
+                </div>
+
+                <div class="bento-card bento-small">
+                    <div class="bento-gradient"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>True Mastery</h3>
+                            <p>Deep understanding</p>
+                        </div>
+                    </div>
+                    <div class="bento-blur"></div>
+                </div>
+
+                <div class="bento-card bento-small">
+                    <div class="bento-gradient"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Stay Motivated</h3>
+                            <p>See progress faster</p>
+                        </div>
+                    </div>
+                    <div class="bento-blur"></div>
+                </div>
+
+                <div class="bento-card bento-medium">
+                    <div class="bento-gradient"></div>
+                    <div class="bento-content">
+                        <div class="bento-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Lifelong Skills</h3>
+                            <p>Meta-learning abilities</p>
+                        </div>
+                    </div>
+                    <div class="bento-blur"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="story-section">
-        <h2 class="section-title">The Traditional Study Problem</h2>
-        <div class="story-content">
-            <div class="story-text">
-                <p>We've all been there: spending hours reading textbooks, highlighting passages, and re-reading notes the night before an exam. We feel busy, productive even. But when test day arrives, the information feels fuzzy, disconnected, difficult to recall.</p>
-                
-                <p>This happens because <span class="highlight">most traditional study habits are fundamentally inefficient</span>. They create an illusion of learning without building real understanding. Passive techniques like highlighting and re-reading feel comfortable, but research shows they're among the least effective methods for retention.</p>
-                
-                <p>The good news? There's a better way. Decades of cognitive science research have identified specific techniques that dramatically improve how we learn. These methods aren't secrets—they're <span class="highlight">proven strategies used by top students, researchers, and professionals worldwide</span>.</p>
-                
-                <p>The difference isn't about being smarter or working harder. It's about working strategically with how your brain naturally learns and remembers information.</p>
+        <div class="container-small">
+            <div class="section-header">
+                <div class="story-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+                    </svg>
+                    <span>The Problem</span>
+                </div>
+                <h2 class="section-title">
+                    The Traditional
+                    <span class="gradient-text gradient-red">Study Problem</span>
+                </h2>
+            </div>
+
+            <div class="story-cards">
+                <div class="story-card story-card-1">
+                    <p>We've all been there: spending hours reading textbooks, highlighting passages, and re-reading notes the night before an exam. We feel busy, productive even. But when test day arrives, the information feels fuzzy, disconnected, difficult to recall.</p>
+                </div>
+
+                <div class="story-card story-card-2">
+                    <p>This happens because <span class="highlight-orange">most traditional study habits are fundamentally inefficient</span>. They create an illusion of learning without building real understanding.</p>
+                </div>
+
+                <div class="story-card story-card-3">
+                    <p>The good news? There's a better way. Decades of cognitive science research have identified specific techniques that dramatically improve how we learn. These methods aren't secrets—they're <span class="highlight-green">proven strategies used by top students, researchers, and professionals worldwide</span>.</p>
+                </div>
+
+                <div class="story-card story-card-4">
+                    <p>The difference isn't about being smarter or working harder.<br><span class="highlight-purple">It's about working strategically with how your brain naturally learns.</span></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats -->
-    <section class="stats">
-        <h2 class="section-title">Learning by the Numbers</h2>
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">70%</div>
-                <p class="stat-label">Information lost within 24 hours without proper technique</p>
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Learning by the
+                    <span class="gradient-text gradient-green">Numbers</span>
+                </h2>
             </div>
 
-            <div class="stat-item">
-                <div class="stat-number">3x</div>
-                <p class="stat-label">More effective than passive reading methods</p>
-            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-gradient"></div>
+                    <div class="stat-icon stat-icon-red">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 17l-5-5-5 5M22 7l-5 5-5-5"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number gradient-text gradient-red">70%</div>
+                    <p>Information lost within 24 hours without proper technique</p>
+                    <div class="stat-blur"></div>
+                </div>
 
-            <div class="stat-item">
-                <div class="stat-number">50%</div>
-                <p class="stat-label">Less time needed with proper study strategies</p>
-            </div>
+                <div class="stat-card">
+                    <div class="stat-gradient"></div>
+                    <div class="stat-icon stat-icon-yellow">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number gradient-text gradient-yellow">3x</div>
+                    <p>More effective than passive reading methods</p>
+                    <div class="stat-blur"></div>
+                </div>
 
-            <div class="stat-item">
-                <div class="stat-number">90%</div>
-                <p class="stat-label">Retention rate with active learning methods</p>
+                <div class="stat-card">
+                    <div class="stat-gradient"></div>
+                    <div class="stat-icon stat-icon-blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number gradient-text gradient-blue">50%</div>
+                    <p>Less time needed with proper study strategies</p>
+                    <div class="stat-blur"></div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-gradient"></div>
+                    <div class="stat-icon stat-icon-green">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-number gradient-text gradient-green">90%</div>
+                    <p>Retention rate with active learning methods</p>
+                    <div class="stat-blur"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="cta-section">
-        <div class="cta-content">
-            <h2>Ready to Transform Your Learning?</h2>
-            <p>Explore our curated collection of proven study techniques and start seeing real results today.</p>
-            <a href="techniques.html" class="cta-button">Browse Techniques</a>
+        <div class="container-small">
+            <div class="cta-box">
+                <div class="cta-bg-orb cta-bg-orb-1"></div>
+                <div class="cta-bg-orb cta-bg-orb-2"></div>
+                
+                <div class="cta-content">
+                    <div class="cta-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                        <span>Start Your Journey</span>
+                    </div>
+
+                    <h2>
+                        Ready to Transform<br>
+                        <span>Your Learning?</span>
+                    </h2>
+
+                    <p>Explore our curated collection of proven study techniques and start seeing real results today.</p>
+
+                    <a href="techniques.html" class="btn-cta">
+                        <span>Browse Techniques</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="cta-dots cta-dots-1"></div>
+                <div class="cta-dots cta-dots-2"></div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="logo">StudyFlow</div>
-            <ul class="footer-links">
-                <li><a href="techniques.html">Techniques</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <p style="color: var(--text-muted);">&copy; 2025 StudyFlow. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="techniques.html">Techniques</a>
+                    <a href="about.html">About</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
         </div>
     </footer>
 
-    <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Add intersection observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe cards
-        document.querySelectorAll('.why-card, .benefit-item, .stat-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>
