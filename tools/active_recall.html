@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Active Recall Tool - StudyFlow</title>
+    
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="active_recall_script.js" defer></script>
+  </head>
+  <body>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="../index.html" class="mobile-menu-link">Home</a>
+        <a href="../techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="../about.html" class="mobile-menu-link">About</a>
+        <a href="../resources.html" class="mobile-menu-link">Resources</a>
+        <a href="../contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <div class="logo">StudyFlow</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../techniques.html">Techniques</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <div class="tool-card">
+            <h1 class="gradient-text gradient-green">Active Recall</h1>
+            
+            <div class="tool-tabs">
+                <button class="tab-btn active" data-tab="quiz">Quiz</button>
+                <button class="tab-btn" data-tab="add">Add Questions</button>
+                <button class="tab-btn" data-tab="manage">Manage</button>
+            </div>
+
+            <div id="quiz" class="tool-tab-content active">
+                
+                <div class="button-wrapper" id="start-quiz-wrapper">
+                    <button id="start-quiz-btn" class="btn-primary" style="padding: 1.25rem 2.5rem; font-size: 1.2rem;">
+                        Start Quiz
+                    </button>
+                </div>
+
+                <div id="quiz-area">
+                    <p id="quiz-stats" class="quiz-stats">Question 1 of 10</p>
+                    <div id="quiz-question">What is the capital of France?</div>
+                    <div id="quiz-answer">Paris</div>
+                    
+                    <div class="button-wrapper" id="quiz-buttons-1">
+                        <button id="show-answer-btn" class="btn-secondary">Show Answer</button>
+                    </div>
+                    
+                    <div class="button-wrapper" id="quiz-buttons-2">
+                        <button id="wrong-btn" class="btn-danger">Wrong</button>
+                        <button id="right-btn" class="btn-success">Correct</button>
+                    </div>
+                </div>
+
+                <div id="results-area">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Quiz Complete!</h2>
+                    <p class="score-display" id="score-percent">100%</p>
+                    <p id="score-details">(10 / 10 correct)</p>
+                </div>
+            </div>
+
+            <div id="add" class="tool-tab-content">
+                <p class="tool-prompt">Add a new question to your quiz deck.</p>
+                <form id="add-question-form">
+                    <textarea id="question-input" class="tool-textarea" placeholder="Enter the question..." style="min-height: 100px;" required></textarea>
+                    <textarea id="answer-input" class="tool-textarea" placeholder="Enter the answer..." style="min-height: 150px;" required></textarea>
+                    <div class="button-wrapper">
+                        <button type="submit" class="btn-primary">Save Question</button>
+                    </div>
+                    <p id="save-message" class="save-message">Question Saved!</p>
+                </form>
+            </div>
+
+            <div id="manage" class="tool-tab-content">
+                <p class="tool-prompt" id="manage-prompt">Your saved questions:</p>
+                <div id="manage-list">
+                    </div>
+                <div class="button-wrapper">
+                    <button id="delete-all-btn" class="btn-danger">Delete All Questions</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="../techniques.html">Techniques</a>
+                    <a href="../about.html">About</a>
+                    <a href="../resources.html">Resources</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
