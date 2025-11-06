@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - StudyFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Simple form styles */
+        .contact-form {
+            background: var(--dark-lighter);
+            padding: 2.5rem;
+            border-radius: 20px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+            color: var(--text);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: var(--dark);
+            color: var(--text);
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">StudyFlow</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Get In Touch</h1>
+        <p>Have a question or a suggestion? We'd love to hear from you.</p>
+    </section>
+
+    <div class="content">
+        <section class="section">
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">StudyFlow</div>
+            <ul class="footer-links">
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p style="color: var(--text-muted);">&copy; 2025 StudyFlow. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
