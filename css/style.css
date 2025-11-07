@@ -2538,3 +2538,128 @@ body {
     background: rgba(239, 68, 68, 0.2);
     border-radius: 50%;
 }
+/* ========================================
+   Tool Page Styles (Generic)
+   ======================================== */
+.tool-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 8rem 1.5rem 4rem;
+}
+
+.tool-card {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.tool-card h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+/* For big timer text */
+.tool-display-lg {
+    font-size: clamp(6rem, 20vw, 10rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, var(--red-400), var(--orange-500));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* For labels and prompts */
+.tool-prompt {
+    font-size: 1.25rem;
+    color: var(--gray-400);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* For text areas */
+.tool-textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0,0,0,0.2);
+    color: var(--white);
+    font-size: 1.1rem;
+    font-family: inherit;
+    line-height: 1.7;
+    resize: vertical;
+    margin-bottom: 2rem;
+}
+.tool-textarea:focus {
+    outline: none;
+    border-color: var(--purple-500);
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.3);
+}
+
+/* Generic button wrapper */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.button-wrapper button,
+.review-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.button-wrapper .btn-primary {
+     background: linear-gradient(135deg, var(--purple-500), var(--pink-500));
+     color: var(--white);
+     box-shadow: 0 10px 40px rgba(168, 85, 247, 0.3);
+}
+.button-wrapper .btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 50px rgba(168, 85, 247, 0.5);
+}
+
+.button-wrapper .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.button-wrapper .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* For save messages */
+.save-message {
+    color: var(--green-400);
+    margin-top: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+    height: 1.5rem;
+}
