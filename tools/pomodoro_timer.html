@@ -1,86 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pomodoro Timer - StudyFlow</title>
-    
-    <link rel="stylesheet" href="../css/style.css" />
-    
-    <script src="pomodoro_timer_script.js" defer></script>
-  </head>
-  <body>
-    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pomodoro Timer - StudyFlow</title>
 
-    <div class="mobile-menu">
-        <a href="../index.html" class="mobile-menu-link">Home</a>
-        <a href="../techniques.html" class="mobile-menu-link">Techniques</a>
-        <a href="../about.html" class="mobile-menu-link">About</a>
-        <a href="../resources.html" class="mobile-menu-link">Resources</a>
-        <a href="../contact.html" class="mobile-menu-link">Contact</a>
-    </div>
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at 20% 20%, #1a1a1a, #0c0c0c);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-    <div class="bg-container">
-        <div class="bg-orb bg-orb-1"></div>
-        <div class="bg-orb bg-orb-2"></div>
-        <div class="bg-orb bg-orb-3"></div>
-        <div class="grid-pattern"></div>
-    </div>
+  nav {
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+  }
 
-    <div class="floating-elements">
-        <div class="float-orb float-orb-1"></div>
-        <div class="float-orb float-orb-2"></div>
-        <div class="float-orb float-orb-3"></div>
-    </div>
+  .nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    <nav class="nav scrolled" id="nav">
-        <div class="nav-container">
-            <div class="logo">StudyFlow</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../techniques.html">Techniques</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../resources.html">Resources</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-            <label class="mobile-menu-btn" for="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
-    </nav>
-    
-    <div class="tool-container">
-        <div class="tool-card" style="max-width: 700px;">
-            <h1 class="gradient-text gradient-red">Pomodoro Timer</h1>
-            
-            <p class="tool-display-lg" id="timer">25:00</p>
-            
-            <div class="button-wrapper">
-                <button id="start" class="btn-primary">Start</button>
-                <button id="stop" class="btn-secondary">Stop</button>
-                <button id="reset" class="btn-secondary">Reset</button>
-            </div>
-        </div>
+  .logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #ffd700;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #ddd;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #ffd700;
+  }
+
+  .timer-tool-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+
+  .timer-card {
+    background: linear-gradient(145deg, #1e1e1e, #151515);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
+    width: 320px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #ff5858, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .timer-display {
+    font-size: 4rem;
+    margin: 30px 0;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+  }
+
+  #start { background: #28a745; color: #fff; }
+  #stop { background: #dc3545; color: #fff; }
+  #reset { background: #ffc107; color: #000; }
+
+  button:hover { transform: scale(1.05); }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+
+</style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <div class="logo">StudyFlow</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../techniques.html">Techniques</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
     </div>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="logo">StudyFlow</div>
-                <nav class="footer-nav">
-                    <a href="../techniques.html">Techniques</a>
-                    <a href="../about.html">About</a>
-                    <a href="../resources.html">Resources</a>
-                    <a href="../contact.html">Contact</a>
-                </nav>
-            </div>
-            <div class="footer-copy">
-                &copy; 2025 StudyFlow. All rights reserved.
-            </div>
-        </div>
-    </footer>
-  </body>
+  </nav>
+
+  <div class="timer-tool-container">
+    <div class="timer-card">
+      <h1 class="gradient-text">Pomodoro Timer</h1>
+      <p class="timer-display" id="timer">25:00</p>
+      <div class="button-wrapper">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 <a href="#">StudyFlow</a>. All rights reserved.
+  </footer>
+
+<script>
+  let timer;
+  let timeLeft = 25 * 60;
+  let isRunning = false;
+
+  const timerDisplay = document.getElementById("timer");
+  const startBtn = document.getElementById("start");
+  const stopBtn = document.getElementById("stop");
+  const resetBtn = document.getElementById("reset");
+
+  function updateDisplay() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timerDisplay.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+  }
+
+  function startTimer() {
+    if (isRunning) return;
+    isRunning = true;
+    timer = setInterval(() => {
+      if (timeLeft > 0) {
+        timeLeft--;
+        updateDisplay();
+      } else {
+        clearInterval(timer);
+        isRunning = false;
+        alert("Time’s up! Take a break 😌");
+      }
+    }, 1000);
+  }
+
+  function stopTimer() {
+    clearInterval(timer);
+    isRunning = false;
+  }
+
+  function resetTimer() {
+    stopTimer();
+    timeLeft = 25 * 60;
+    updateDisplay();
+  }
+
+  startBtn.addEventListener("click", startTimer);
+  stopBtn.addEventListener("click", stopTimer);
+  resetBtn.addEventListener("click", resetTimer);
+
+  updateDisplay();
+</script>
+
+</body>
 </html>
