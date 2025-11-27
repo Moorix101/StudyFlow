@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chunking Tool - StudyFlow</title>
+    
+    <link rel="stylesheet" href="../css/style.css" />
+    
+    <script src="chunking_script.js" defer></script>
+  </head>
+  <body>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="../index.html" class="mobile-menu-link">Home</a>
+        <a href="../techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="../about.html" class="mobile-menu-link">About</a>
+        <a href="../resources.html" class="mobile-menu-link">Resources</a>
+        <a href="../contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <div class="logo">StudyFlow</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../techniques.html">Techniques</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <div class="tool-card" style="max-width: 900px;">
+            <h1 class="gradient-text gradient-pink">Chunking</h1>
+            
+            <div class="tool-tabs">
+                <button class="tab-btn active" data-tab="organize">Organize</button>
+                <button class="tab-btn" data-tab="practice">Practice</button>
+            </div>
+
+            <div id="organize" class="tool-tab-content active">
+                <p class="tool-prompt">Break information into meaningful chunks. Add items and organize them into groups of 3-5 items each.</p>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--gray-300);">Add Items</h3>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <input type="text" id="item-input" class="tool-textarea" placeholder="Enter an item..." style="flex: 1; min-height: auto; padding: 0.75rem;">
+                        <button id="add-item-btn" class="btn-primary">Add Item</button>
+                    </div>
+                    <div id="items-list" style="margin-bottom: 1.5rem;">
+                        <!-- Items will be listed here -->
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--gray-300);">Create Chunks</h3>
+                    <div id="chunks-container">
+                        <!-- Chunks will be created here -->
+                    </div>
+                    <div class="button-wrapper" style="margin-top: 1rem;">
+                        <button id="create-chunk-btn" class="btn-secondary">Create New Chunk</button>
+                        <button id="auto-chunk-btn" class="btn-secondary">Auto-Chunk (3-5 items)</button>
+                    </div>
+                </div>
+
+                <div class="button-wrapper">
+                    <button id="save-chunks-btn" class="btn-primary">Save Chunks</button>
+                    <button id="clear-all-btn" class="btn-danger">Clear All</button>
+                </div>
+                <p id="save-message" class="save-message" style="display: none;">Chunks saved!</p>
+            </div>
+
+            <div id="practice" class="tool-tab-content">
+                <p class="tool-prompt">Practice recalling your chunks. First recall chunk names, then items within each chunk.</p>
+                <div id="practice-area">
+                    <div id="practice-start" class="button-wrapper">
+                        <button id="start-practice-btn" class="btn-primary" style="padding: 1.25rem 2.5rem; font-size: 1.2rem;">
+                            Start Practice
+                        </button>
+                    </div>
+                    <div id="practice-session" style="display: none;">
+                        <p id="practice-instruction" style="color: var(--gray-300); margin-bottom: 1.5rem;"></p>
+                        <div id="practice-display" style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 1.5rem; min-height: 200px;">
+                            <!-- Practice content -->
+                        </div>
+                        <div class="button-wrapper">
+                            <button id="show-answer-btn" class="btn-secondary">Show Answer</button>
+                            <button id="next-practice-btn" class="btn-primary">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="saved-chunks-list" style="margin-top: 2rem;">
+                    <!-- Saved chunks will be shown here -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="../techniques.html">Techniques</a>
+                    <a href="../about.html">About</a>
+                    <a href="../resources.html">Resources</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
+

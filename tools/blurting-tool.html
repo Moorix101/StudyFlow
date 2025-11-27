@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blurting Tool - StudyFlow</title>
+    
+    <link rel="stylesheet" href="../css/style.css" />
+    
+    <script src="blurting_tool_script.js" defer></script>
+  </head>
+  <body>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="../index.html" class="mobile-menu-link">Home</a>
+        <a href="../techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="../about.html" class="mobile-menu-link">About</a>
+        <a href="../resources.html" class="mobile-menu-link">Resources</a>
+        <a href="../contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <div class="logo">StudyFlow</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../techniques.html">Techniques</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <div class="tool-card" style="max-width: 900px;">
+            <h1 class="gradient-text gradient-yellow">Blurting Method</h1>
+            
+            <div class="tool-tabs">
+                <button class="tab-btn active" data-tab="blurt">Blurt</button>
+                <button class="tab-btn" data-tab="compare">Compare</button>
+                <button class="tab-btn" data-tab="notes">Your Notes</button>
+            </div>
+
+            <div id="blurt" class="tool-tab-content active">
+                <p class="tool-prompt">Close your notes and write down everything you remember about the topic. Don't worry about organization—just get it all out!</p>
+                <div class="timer-display" id="timer-display" style="margin-bottom: 1rem; font-size: 1.5rem; color: var(--gray-300);">
+                    <span id="timer">15:00</span>
+                </div>
+                <textarea id="blurt-textarea" class="tool-textarea" placeholder="Write everything you remember here... Don't peek at your notes!" style="min-height: 400px;" required></textarea>
+                <div class="button-wrapper">
+                    <button id="start-timer-btn" class="btn-secondary">Start Timer (15 min)</button>
+                    <button id="save-blurt-btn" class="btn-primary">Save Blurt</button>
+                    <button id="clear-blurt-btn" class="btn-danger">Clear</button>
+                </div>
+                <p id="save-message" class="save-message" style="display: none;">Blurt saved! Now go to Compare tab.</p>
+            </div>
+
+            <div id="compare" class="tool-tab-content">
+                <p class="tool-prompt">Compare your blur with your notes. Mark what you remembered correctly and add what you missed.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; color: var(--gray-300);">Your Blurt</h3>
+                        <div id="blurt-display" class="compare-box" style="min-height: 300px; padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 0.5rem; border: 1px solid rgba(255,255,255,0.1);">
+                            <p style="color: var(--gray-400);">No blurt saved yet. Go to Blurt tab first.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; color: var(--gray-300);">Your Notes</h3>
+                        <textarea id="notes-textarea" class="tool-textarea" placeholder="Paste your notes here to compare..." style="min-height: 300px;"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--gray-300);">Gaps & Missing Information</h3>
+                    <textarea id="gaps-textarea" class="tool-textarea" placeholder="Add the information you missed here..." style="min-height: 200px;"></textarea>
+                </div>
+                <div class="button-wrapper" style="margin-top: 1rem;">
+                    <button id="save-gaps-btn" class="btn-primary">Save Gaps</button>
+                </div>
+            </div>
+
+            <div id="notes" class="tool-tab-content">
+                <p class="tool-prompt">Your saved blurts and identified gaps:</p>
+                <div id="saved-blurts-list">
+                    <!-- Saved blurts will be rendered here -->
+                </div>
+                <div class="button-wrapper" style="margin-top: 1.5rem;">
+                    <button id="delete-all-btn" class="btn-danger">Delete All</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="../techniques.html">Techniques</a>
+                    <a href="../about.html">About</a>
+                    <a href="../resources.html">Resources</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
+

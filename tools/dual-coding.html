@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dual Coding Tool - StudyFlow</title>
+    
+    <link rel="stylesheet" href="../css/style.css" />
+    
+    <script src="dual_coding_script.js" defer></script>
+  </head>
+  <body>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="../index.html" class="mobile-menu-link">Home</a>
+        <a href="../techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="../about.html" class="mobile-menu-link">About</a>
+        <a href="../resources.html" class="mobile-menu-link">Resources</a>
+        <a href="../contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <div class="logo">StudyFlow</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../techniques.html">Techniques</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <div class="tool-card" style="max-width: 1000px;">
+            <h1 class="gradient-text gradient-blue">Dual Coding</h1>
+            
+            <div class="tool-tabs">
+                <button class="tab-btn active" data-tab="create">Create</button>
+                <button class="tab-btn" data-tab="saved">Saved Items</button>
+            </div>
+
+            <div id="create" class="tool-tab-content active">
+                <p class="tool-prompt">Combine verbal and visual information. Write text and describe or sketch visuals to create dual-coded learning materials.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; color: var(--gray-300);">Verbal/Text</h3>
+                        <textarea id="verbal-input" class="tool-textarea" placeholder="Enter text description, explanation, or notes..." style="min-height: 300px;"></textarea>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; color: var(--gray-300);">Visual Description</h3>
+                        <textarea id="visual-input" class="tool-textarea" placeholder="Describe the visual (diagram, image, sketch) or draw it and describe what you drew..." style="min-height: 300px;"></textarea>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="margin-bottom: 0.5rem; color: var(--gray-300);">Topic/Title</h3>
+                    <input type="text" id="topic-input" class="tool-textarea" placeholder="Enter topic or title..." style="min-height: auto; padding: 0.75rem;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 0.5rem; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 style="margin-bottom: 0.5rem; color: var(--gray-300);">Connection</h3>
+                    <textarea id="connection-input" class="tool-textarea" placeholder="Explain how the verbal and visual information connect. What does the visual show about the text? How do they reinforce each other?" style="min-height: 100px;"></textarea>
+                </div>
+
+                <div class="button-wrapper">
+                    <button id="save-item-btn" class="btn-primary">Save Dual-Coded Item</button>
+                    <button id="clear-btn" class="btn-secondary">Clear</button>
+                </div>
+                <p id="save-message" class="save-message" style="display: none;">Item saved!</p>
+            </div>
+
+            <div id="saved" class="tool-tab-content">
+                <p class="tool-prompt">Your saved dual-coded items:</p>
+                <div id="saved-items-list">
+                    <!-- Saved items will be rendered here -->
+                </div>
+                <div class="button-wrapper" style="margin-top: 1.5rem;">
+                    <button id="delete-all-btn" class="btn-danger">Delete All</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="../techniques.html">Techniques</a>
+                    <a href="../about.html">About</a>
+                    <a href="../resources.html">Resources</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
+

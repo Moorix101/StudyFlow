@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Testing - StudyFlow</title>
+    
+    <link rel="stylesheet" href="../css/style.css" />
+    
+    <script src="practice_testing_script.js" defer></script>
+  </head>
+  <body>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="../index.html" class="mobile-menu-link">Home</a>
+        <a href="../techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="../about.html" class="mobile-menu-link">About</a>
+        <a href="../resources.html" class="mobile-menu-link">Resources</a>
+        <a href="../contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <div class="logo">StudyFlow</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../techniques.html">Techniques</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <div class="tool-card" style="max-width: 900px;">
+            <h1 class="gradient-text gradient-yellow">Practice Testing</h1>
+            
+            <div class="tool-tabs">
+                <button class="tab-btn active" data-tab="test">Take Test</button>
+                <button class="tab-btn" data-tab="add">Add Questions</button>
+                <button class="tab-btn" data-tab="results">Results</button>
+            </div>
+
+            <div id="test" class="tool-tab-content active">
+                <div id="test-start" class="button-wrapper">
+                    <button id="start-test-btn" class="btn-primary" style="padding: 1.25rem 2.5rem; font-size: 1.2rem;">
+                        Start Practice Test
+                    </button>
+                </div>
+
+                <div id="test-area" style="display: none;">
+                    <p id="test-stats" class="quiz-stats">Question 1 of 10</p>
+                    <div class="question-card" style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 1.5rem;">
+                        <div id="test-question" style="font-size: 1.2rem; line-height: 1.8; color: var(--gray-300); margin-bottom: 1.5rem;">
+                            Question will appear here
+                        </div>
+                        <textarea id="test-answer" class="tool-textarea" placeholder="Type your answer here..." style="min-height: 150px;"></textarea>
+                    </div>
+                    
+                    <div class="button-wrapper">
+                        <button id="submit-answer-btn" class="btn-primary">Submit Answer</button>
+                        <button id="skip-question-btn" class="btn-secondary">Skip</button>
+                    </div>
+                </div>
+
+                <div id="test-complete" style="display: none;">
+                    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Test Complete!</h2>
+                    <p class="score-display" id="score-percent">0%</p>
+                    <p id="score-details" style="color: var(--gray-300); margin-bottom: 1.5rem;">(0 / 0 correct)</p>
+                    <div class="button-wrapper">
+                        <button id="review-test-btn" class="btn-primary">Review Answers</button>
+                        <button id="new-test-btn" class="btn-secondary">New Test</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="add" class="tool-tab-content">
+                <p class="tool-prompt">Add practice questions to your test bank.</p>
+                <form id="add-question-form">
+                    <textarea id="question-input" class="tool-textarea" placeholder="Enter the question..." style="min-height: 100px;" required></textarea>
+                    <textarea id="answer-input" class="tool-textarea" placeholder="Enter the correct answer (for review)..." style="min-height: 150px;" required></textarea>
+                    <div class="button-wrapper">
+                        <button type="submit" class="btn-primary">Add Question</button>
+                    </div>
+                    <p id="save-message" class="save-message" style="display: none;">Question Added!</p>
+                </form>
+            </div>
+
+            <div id="results" class="tool-tab-content">
+                <p class="tool-prompt">Your test results and question bank:</p>
+                <div id="results-list">
+                    <!-- Results will be rendered here -->
+                </div>
+                <div class="button-wrapper" style="margin-top: 1.5rem;">
+                    <button id="delete-all-btn" class="btn-danger">Delete All Questions</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="../techniques.html">Techniques</a>
+                    <a href="../about.html">About</a>
+                    <a href="../resources.html">Resources</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
+

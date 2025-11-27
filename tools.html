@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tools - StudyFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-menu-link">Home</a>
+        <a href="techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="tools.html" class="mobile-menu-link">Tools</a>
+        <a href="about.html" class="mobile-menu-link">About</a>
+        <a href="resources.html" class="mobile-menu-link">Resources</a>
+        <a href="contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <div class="logo">StudyFlow</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>Interactive Tools</h1>
+        <p>Access powerful interactive tools to enhance your study sessions and practice proven learning techniques</p>
+    </section>
+
+    <section class="techniques-section">
+        <div class="techniques-grid">
+            
+            <div class="technique-card">
+                <div class="card-banner gradient-1">
+                    <img src="assets/pomodoro.png" alt="Pomodoro Icon" style="width: 60%; height: 60%; object-fit: contain;">
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Pomodoro Timer</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Focus timer with 25-minute work sessions and short breaks. Perfect for maintaining concentration during long study sessions.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Timer</span>
+                        <span class="tag">Focus</span>
+                        <span class="tag">Productivity</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Time Management
+                        </div>
+                        <a href="tools/pomodoro_timer.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-2">🧠</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Feynman Tool</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Practice explaining concepts in simple terms. This tool helps you identify knowledge gaps and build deep understanding.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Understanding</span>
+                        <span class="tag">Teaching</span>
+                        <span class="tag">Conceptual</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Complex Concepts
+                        </div>
+                        <a href="tools/feynman_tool.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-3">📅</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Spaced Repetition</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Schedule your reviews with optimal spacing intervals. Maximize long-term retention with scientifically-proven intervals.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Memory</span>
+                        <span class="tag">Scheduling</span>
+                        <span class="tag">Retention</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Long-term Learning
+                        </div>
+                        <a href="tools/spaced_repetition.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-4">⚡</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Active Recall</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Create and practice with flashcards. Test yourself regularly to strengthen memory retrieval pathways.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Flashcards</span>
+                        <span class="tag">Testing</span>
+                        <span class="tag">Memory</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> All Subjects
+                        </div>
+                        <a href="tools/active_recall.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-5">📊</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Time Blocking</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Plan and organize your study schedule with time blocks. Visualize your week and allocate time effectively.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Planning</span>
+                        <span class="tag">Schedule</span>
+                        <span class="tag">Organization</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Weekly Planning
+                        </div>
+                        <a href="tools/time_blocking_tool.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-1">🗃️</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Leitner System</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Spaced repetition flashcard system with 5 boxes. Cards move forward when you know them, back when you don't.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Flashcards</span>
+                        <span class="tag">Spaced Repetition</span>
+                        <span class="tag">Memory</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Vocabulary & Facts
+                        </div>
+                        <a href="tools/leitner-system.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-2">💨</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Blurting Method</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Write everything you remember without looking at notes, then compare and identify gaps. Quick active recall practice.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Active Recall</span>
+                        <span class="tag">Quick Review</span>
+                        <span class="tag">Testing</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Quick Reviews
+                        </div>
+                        <a href="tools/blurting-tool.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-3">🔄</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Interleaving</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Mix different topics and problem types in your practice. Improve your ability to distinguish between concepts.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Problem Solving</span>
+                        <span class="tag">Mixed Practice</span>
+                        <span class="tag">Flexibility</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Multiple Subjects
+                        </div>
+                        <a href="tools/interleaving.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-4">🎭</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Dual Coding</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Combine verbal and visual information. Create dual-coded learning materials with text and visual descriptions.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Visual</span>
+                        <span class="tag">Multimodal</span>
+                        <span class="tag">Memory</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Complex Concepts
+                        </div>
+                        <a href="tools/dual-coding.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-5">📝</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Practice Testing</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Create and take practice tests. Track your results and identify areas needing more study.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Testing</span>
+                        <span class="tag">Assessment</span>
+                        <span class="tag">Memory</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Exam Prep
+                        </div>
+                        <a href="tools/practice-testing.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-1">🧩</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Chunking</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Organize information into meaningful chunks. Break large amounts of data into manageable groups for better memory.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Organization</span>
+                        <span class="tag">Memory</span>
+                        <span class="tag">Processing</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Large Amounts of Info
+                        </div>
+                        <a href="tools/chunking.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-2">🧠</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Mnemonics Creator</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span class="inactive">★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Create memory aids like acronyms, rhymes, or associations. Build memorable mnemonics to remember information easily.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Memory</span>
+                        <span class="tag">Creativity</span>
+                        <span class="tag">Association</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Lists & Sequences
+                        </div>
+                        <a href="tools/mnemonics.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="technique-card">
+                <div class="card-banner gradient-3">🏰</div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <h3 class="card-title">Memory Palace</h3>
+                        <div class="difficulty">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+                    </div>
+                    <p class="card-description">
+                        Create and practice with memory palaces. Place items at locations and walk through mentally to recall information.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Memory</span>
+                        <span class="tag">Visual</span>
+                        <span class="tag">Advanced</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="best-for">
+                            <strong>Best for:</strong> Long Sequences
+                        </div>
+                        <a href="tools/memory-palace.html" class="learn-more">Launch Tool →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="techniques.html">Techniques</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="about.html">About</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

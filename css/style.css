@@ -2334,9 +2334,10 @@ body {
     margin-bottom: 2rem;
     display: none; /* Hidden until 'Show Answer' is clicked */
 }
-#quiz-stats {
+#quiz-stats, .quiz-stats {
     color: var(--gray-400);
     margin-bottom: 1rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 #quiz-buttons-2 {
@@ -2662,4 +2663,69 @@ body {
     opacity: 0;
     transition: opacity 0.5s;
     height: 1.5rem;
+}
+
+/* Additional tool styles */
+.flashcard {
+    min-height: 300px;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.flashcard-front, .flashcard-back {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--gray-300);
+}
+
+.boxes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.box-card {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.box-count {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--purple-400);
+    margin: 0.5rem 0;
+}
+
+.box-schedule {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+}
+
+.compare-box {
+    min-height: 300px;
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--gray-300);
+    white-space: pre-wrap;
+}
+
+.timer-display {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--gray-300);
+    margin-bottom: 1rem;
 }

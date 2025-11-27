@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Palace - StudyFlow</title>
+    
+    <link rel="stylesheet" href="../css/style.css" />
+    
+    <script src="memory_palace_script.js" defer></script>
+  </head>
+  <body>
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+
+    <div class="mobile-menu">
+        <a href="../index.html" class="mobile-menu-link">Home</a>
+        <a href="../techniques.html" class="mobile-menu-link">Techniques</a>
+        <a href="../about.html" class="mobile-menu-link">About</a>
+        <a href="../resources.html" class="mobile-menu-link">Resources</a>
+        <a href="../contact.html" class="mobile-menu-link">Contact</a>
+    </div>
+
+    <div class="bg-container">
+        <div class="bg-orb bg-orb-1"></div>
+        <div class="bg-orb bg-orb-2"></div>
+        <div class="bg-orb bg-orb-3"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <div class="floating-elements">
+        <div class="float-orb float-orb-1"></div>
+        <div class="float-orb float-orb-2"></div>
+        <div class="float-orb float-orb-3"></div>
+    </div>
+
+    <nav class="nav scrolled" id="nav">
+        <div class="nav-container">
+            <div class="logo">StudyFlow</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../techniques.html">Techniques</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+            <label class="mobile-menu-btn" for="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+    
+    <div class="tool-container">
+        <div class="tool-card" style="max-width: 1000px;">
+            <h1 class="gradient-text gradient-yellow">Memory Palace</h1>
+            
+            <div class="tool-tabs">
+                <button class="tab-btn active" data-tab="create">Create Palace</button>
+                <button class="tab-btn" data-tab="practice">Practice Walk</button>
+                <button class="tab-btn" data-tab="saved">Saved Palaces</button>
+            </div>
+
+            <div id="create" class="tool-tab-content active">
+                <p class="tool-prompt">Create your memory palace by adding locations and placing items at each location.</p>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--gray-300);">Palace Name</h3>
+                    <input type="text" id="palace-name-input" class="tool-textarea" placeholder="Name your palace (e.g., My House, School, Favorite Route)..." style="min-height: auto; padding: 0.75rem;">
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--gray-300);">Add Location</h3>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <input type="text" id="location-input" class="tool-textarea" placeholder="Location name (e.g., Front Door, Kitchen, Bedroom)..." style="flex: 1; min-height: auto; padding: 0.75rem;">
+                        <button id="add-location-btn" class="btn-primary">Add Location</button>
+                    </div>
+                    <div id="locations-list" style="margin-bottom: 1.5rem;">
+                        <!-- Locations will be listed here -->
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--gray-300);">Place Items at Locations</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <select id="location-select" class="tool-textarea" style="min-height: auto; padding: 0.75rem; background: rgba(255,255,255,0.1); color: var(--white);">
+                            <option value="">Select a location...</option>
+                        </select>
+                        <input type="text" id="item-input" class="tool-textarea" placeholder="Item to remember..." style="min-height: auto; padding: 0.75rem;">
+                    </div>
+                    <div class="button-wrapper">
+                        <button id="place-item-btn" class="btn-primary">Place Item</button>
+                    </div>
+                </div>
+
+                <div id="palace-visualization" style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 0.5rem; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 style="margin-bottom: 1rem; color: var(--gray-300);">Your Palace Route</h3>
+                    <div id="palace-route">
+                        <!-- Palace route will be visualized here -->
+                    </div>
+                </div>
+
+                <div class="button-wrapper">
+                    <button id="save-palace-btn" class="btn-primary">Save Palace</button>
+                    <button id="clear-palace-btn" class="btn-danger">Clear Palace</button>
+                </div>
+                <p id="save-message" class="save-message" style="display: none;">Palace saved!</p>
+            </div>
+
+            <div id="practice" class="tool-tab-content">
+                <p class="tool-prompt">Practice walking through your memory palace. Mentally visit each location and recall the items placed there.</p>
+                <div id="practice-area">
+                    <div id="practice-start" class="button-wrapper">
+                        <button id="start-practice-btn" class="btn-primary" style="padding: 1.25rem 2.5rem; font-size: 1.2rem;">
+                            Start Practice Walk
+                        </button>
+                    </div>
+                    <div id="practice-session" style="display: none;">
+                        <p id="practice-stats" class="quiz-stats">Location 1 of 5</p>
+                        <div style="padding: 2rem; background: rgba(255,255,255,0.05); border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 1.5rem;">
+                            <h3 id="current-location" style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--gray-300);">Location Name</h3>
+                            <p id="practice-instruction" style="color: var(--gray-400); margin-bottom: 1.5rem;">What item is placed at this location?</p>
+                            <textarea id="practice-answer" class="tool-textarea" placeholder="Type the item you remember..." style="min-height: 100px;"></textarea>
+                        </div>
+                        <div class="button-wrapper">
+                            <button id="check-answer-btn" class="btn-primary">Check Answer</button>
+                            <button id="next-location-btn" class="btn-secondary">Next Location</button>
+                        </div>
+                    </div>
+                    <div id="practice-complete" style="display: none;">
+                        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Walk Complete!</h2>
+                        <p id="practice-summary" style="color: var(--gray-300); margin-bottom: 1.5rem;">You've completed your memory palace walk.</p>
+                        <div class="button-wrapper">
+                            <button id="restart-walk-btn" class="btn-primary">Walk Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="saved" class="tool-tab-content">
+                <p class="tool-prompt">Your saved memory palaces:</p>
+                <div id="saved-palaces-list">
+                    <!-- Saved palaces will be rendered here -->
+                </div>
+                <div class="button-wrapper" style="margin-top: 1.5rem;">
+                    <button id="delete-all-btn" class="btn-danger">Delete All Palaces</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">StudyFlow</div>
+                <nav class="footer-nav">
+                    <a href="../techniques.html">Techniques</a>
+                    <a href="../about.html">About</a>
+                    <a href="../resources.html">Resources</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 StudyFlow. All rights reserved.
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
+
